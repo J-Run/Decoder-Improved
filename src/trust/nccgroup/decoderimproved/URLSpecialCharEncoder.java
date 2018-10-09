@@ -15,7 +15,7 @@ public class URLSpecialCharEncoder extends ByteModifier {
         try {
             String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             String numbers = "0123456789";
-            String specialChars = "$-_.+!*'(),,";
+            String specialChars = "$-_.!*'(),,";
             byte[] whitelist = (letters + numbers + specialChars).getBytes("UTF-8");
 
             String output = "";

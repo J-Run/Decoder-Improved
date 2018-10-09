@@ -24,6 +24,8 @@ public class EncodeMode extends ModificationMode {
         // All encoders are managed within this arraylist, new encoders must be added here to appear
         encoders = new ArrayList<>();
         encoders.add(new PlaintextEncoder());
+        encoders.add(new PAReqEncoder());
+        encoders.add(new ZLIBEncoder());
         encoders.add(new URLEncoder());
         encoders.add(new URLSpecialCharEncoder());
         encoders.add(new HTMLEncoder());
@@ -33,7 +35,6 @@ public class EncodeMode extends ModificationMode {
         encoders.add(new Base64UrlEncoder());
         encoders.add(new ASCIIHexEncoder());
         encoders.add(new GZIPEncoder());
-        encoders.add(new ZlibEncoder());
         //encoders.add(new FooBarEncoder());
 
         // Swing Components for displaying encoder names

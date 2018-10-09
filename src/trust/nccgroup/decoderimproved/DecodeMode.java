@@ -21,13 +21,14 @@ public class DecodeMode extends ModificationMode {
         decoders = new ArrayList<>();
         // All decoders go here
         decoders.add(new PlaintextDecoder());
+        decoders.add(new PAReqDecoder());
         decoders.add(new URLDecoder());
+        decoders.add(new ZLIBDecoder());
         decoders.add(new HTMLDecoder());
         decoders.add(new Base64Decoder());
         decoders.add(new FuzzyBase64Decoder());
         decoders.add(new ASCIIHexDecoder());
         decoders.add(new GZIPDecoder());
-        decoders.add(new ZlibDecoder());
 
         // Swing Components
         decoderComboBox = new JComboBox<>();
